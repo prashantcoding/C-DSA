@@ -194,3 +194,26 @@ int main(){
 	
 }
 
+///////////////Merge two sorte link list in shorted way logic/////////////////////////
+/*
+SinglyLinkedListNode *fresh=head1;
+            while(head1->next!=NULL){
+                head1=head1->next;
+            }
+            head1->next=head2;
+            
+            SinglyLinkedListNode *current_ptr=fresh->next;
+            
+            while(current_ptr!=NULL){
+                SinglyLinkedListNode *prev_ptr=fresh;
+                while(prev_ptr!=current_ptr){
+                    if(prev_ptr->data>current_ptr->data){
+                        int temp=prev_ptr->data;
+                        prev_ptr->data=current_ptr->data;
+                        current_ptr->data=temp;
+                    }
+                    prev_ptr=prev_ptr->next;
+                }
+                current_ptr=current_ptr->next;     
+            }
+            return fresh;*/
