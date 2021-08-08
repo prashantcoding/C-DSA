@@ -150,4 +150,4 @@ int main(){
 	
 	
 }
-///changing something new
+///function to delte an num ber
