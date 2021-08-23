@@ -1,5 +1,3 @@
-//used to display the stl containers
-/////////////////////////////////////
 #include<iostream>
 #include<iterator>
 #include<vector>
@@ -14,4 +12,4 @@ int main(){
 		cout<<*ptr<<" ";
 	}
 }
-////////////////////////////////////////
+//////////////////////////////////////
