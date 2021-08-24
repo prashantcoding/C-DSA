@@ -149,4 +149,94 @@ int main(){
 	
 		
 }
-///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////2 STACK WITH ONE ARRAY///////////////////////////////////////
+#include<iostream>
+using namespace std;
+class stack{
+	private:
+		static const int max=100;
+		int arr[max];
+		int top1;
+		int top2;
+	public:
+	stack(){
+		top1=-1;
+		top2=100;
+	}
+	bool isempty1();
+	bool isfull1();
+	bool isempty2();
+	bool isfull2();
+	int pop1();
+	int pop2();
+	void push1(int x);
+	void push2(int x);
+};
+void stack::push1(int x){
+	if(top1+1>=(max/2)){
+		cout<<"Stack Overflow"<<endl;
+	}
+	else{
+		arr[++top1]=x;
+	}
+	
+}
+void stack::push2(int x){
+	if(top2-1<max/2){
+		cout<<"Stack Overflow"<<endl;
+	}
+	else{
+		arr[--top2]=x;
+	}
+	
+}
+int stack::pop1(){
+	if(top1==-1){
+		cout<<"stack is underflow"<<endl;
+	}
+	else{
+		int a=arr[top1];
+		top1--;
+		return a;
+	}
+}
+int stack::pop2(){
+	if(top2==100){
+		cout<<"stack is underflow"<<endl;
+	}
+	else{
+		int a=arr[top2];
+		top2++;
+		return a;
+	}
+}
+bool stack::isempty1(){
+	if(top1==-1)
+		return true;
+	return false;
+}
+bool stack::isempty2(){
+	if(top2==100)
+		return true;
+	return false;
+}
+bool stack::isfull1(){
+	if(top1==(max/2)-1)
+		return true;
+	return false;
+}
+bool stack::isfull2(){
+	if(top2==max/2)
+		return true;
+	return false;
+}
+int main(){
+	stack st;
+	st.push1(6);
+	st.push2(10);
+	cout<<st.pop1();
+	cout<<st.pop2();
+	cout<<st.isempty2();
+		
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
