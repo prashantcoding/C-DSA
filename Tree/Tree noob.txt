@@ -1,0 +1,18 @@
+					TREE -HIERARCHICAL DATA STRUCTURE
+1.	Tree Vocabulary 
+Root= Topmost Node 
+Children= element those have a parent (Upper Node or branch of some node)
+Parent=Having Nodes Branches (Or children)
+Why Trees:
+Access - Moderate    Trees>linked List, Trees<Arrays
+Insertion/deletion     Trees>Array, Trees<Unordered Linked list
+Don’t have node limit like ll unliked arr
+Binary Tree ---- Parent of 2 children
+Structure of Binary Tree 
+Struct node {
+	int data;
+	Struct node*left; ------Left children
+	Struct node*right -------Right children
+	
+} 
+
