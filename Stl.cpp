@@ -26,6 +26,48 @@ int main(){
 		
 		
 }
+////////////////////////////Some Algor//////////////////////////////////////////
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+void show(vector<int> ar){
+	for(int i=0;i<ar.size();i++){
+		cout<<ar[i]<<" ";
+	}
+	cout<<endl;
+}
+
+int main(){
+	int n=5;
+	vector<int> a;
+	for(int i=0;i<n;i++){
+		int c;
+		cin>>c;
+		a.push_back(c);
+	}
+	//sorting algorithm
+	sort(a.begin(),a.end());
+	//show algorithm
+	show(a);
+	//Binary search algorithm
+	cout<<"\n"<<binary_search(a.begin(),a.end(),5);
+	//reverse
+	cout<<endl;
+	reverse(a.begin(),a.end());
+	show(a);
+	//max element 
+	cout<<*max_element(a.begin(),a.end());
+	//min element
+	cout<<*min_element(a.begin(),a.end());
+	cout<<endl;
+	//Accumulate
+	int sum=0;
+	sum=accumulate(a.begin(),a.end(),sum);
+	cout<<"sum"<<sum<<endl;
+	
+	
+}
 //////////////////////////////////////////////////////////////////////////////////
 #include<iostream>
 #include<vector>
