@@ -32,6 +32,64 @@ void print(node *head){
 	}
 	
 }
+//insertion//////////////////////INSERT AT THE BEGINNING////////////////////////////////////////////
+void insert_at_beg(node **head,int data){
+	node *new_node=new node();
+	new_node->data=data;
+	new_node->next=NULL;
+	
+	if(head==NULL){
+		*head= new_node;
+	}
+	new_node->next=*head;
+	*head=new_node;
+}
+///////////////INSERT AT THE END///////////////////////////////////////////////
+void insert_at_end(node **head,int data){
+		node *new_node=new node();
+	new_node->data=data;
+	new_node->next=NULL;
+	node *temp=new node();
+	temp=*head;
+	if(head==NULL){
+		*head= new_node;
+		return;
+	}
+	while(temp->next!=NULL){
+		temp=temp->next;
+	}
+	temp->next=new_node;
+	
+	
+	
+}
+//////////////////////////INSERT AT ANY POSITION
+void insert_at_any_postion(node **head,int key,int data){
+	node *prev=new node();
+	node *current=new node();
+	node *new_node=new node();
+	new_node->data=data;
+	node *temp=new node();
+	prev=*head;
+	current=*head;
+	while(current->next!=NULL&&current->data!=key ){
+		
+		prev=current;
+		current=current->next;
+		
+	}
+	if(current->next==NULL){
+		cout<<"Element Node found";
+		return;
+	}
+	cout<<prev->data;
+	cout<<current->data;
+	prev->next=new_node;
+	new_node->next=current;
+	
+	
+}
+//////////////////////////////////////////
 //deleting the duplicate node 
 void delete_duplicate(node **head){
 	node *prev=*head;
